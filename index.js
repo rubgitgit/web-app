@@ -37,6 +37,7 @@ app.use(
   })
 );
 
+
 app.use(
  auth({
    secret: SESSION_SECRET,
@@ -44,6 +45,7 @@ app.use(
    baseURL: APP_URL,
  })
 );
+
 
 const expenses = [
   {
