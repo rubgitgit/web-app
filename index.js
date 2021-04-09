@@ -5,7 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const path = require("path");
 const { createServer } = require("http");
-const { auth } = require("express-openid-connect");
+//const { auth } = require("express-openid-connect");
 
 const {
   checkUrl,
@@ -36,7 +36,7 @@ app.use(
     saveUninitialized: true,
   })
 );
-
+/*
 app.use(
  auth({
    secret: SESSION_SECRET,
@@ -44,7 +44,7 @@ app.use(
    baseURL: APP_URL,
  })
 );
-
+*/
 const expenses = [
   {
     date: new Date(),
