@@ -78,7 +78,8 @@ app.get("/user", requiresAuth(), async (req, res) => {
 
 app.get("/expenses", requiresAuth(), async (req, res, next) => {
   try {
-    let {token_type,access_token} = req.oidc.accessToken;
+    //let {token_type,access_token} = req.oidc.accessToken;
+    let { token_type, access_token, isExpired, refresh } = req.oidc.accessToken;
      const expenses = await axios.get(`${API_URL}/reports`, {
      headers: {
        Authorization: `${token_type} ${access_token}`,
